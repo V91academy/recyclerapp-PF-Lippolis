@@ -1,0 +1,128 @@
+{
+  "ingredients": [
+    {
+      "name": "Galliano",
+      "qty": "2 1/2 shots"
+    },
+    {
+      "name": "Ginger ale",
+      "qty": ""
+    },
+    {
+      "name": "Ice",
+      "qty": ""
+    },
+    {
+      "name": "Gin",
+      "qty": "1 3/4 shot"
+    },
+    {
+      "name": "Grand Marnier",
+      "qty": "1 Shot"
+    },
+    {
+      "name": "Lemon Juice",
+      "qty": "1/4 Shot"
+    },
+    {
+      "name": "Grenadine",
+      "qty": "1/8 Shot"
+    },
+    {
+      "name": "Amaretto",
+      "qty": "1/3"
+    },
+    {
+      "name": "Baileys irish cream",
+      "qty": "1/3"
+    },
+    {
+      "name": "Cognac",
+      "qty": "1/3"
+    },
+    {
+      "name": "Creme de Cassis",
+      "qty": "1 part"
+    },
+    {
+      "name": "Champagne",
+      "qty": "5 parts"
+    },
+    {
+      "name": "Kahlua",
+      "qty": "1/3 part"
+    },
+    {
+      "name": "Baileys irish cream",
+      "qty": "1/3 part"
+    },
+    {
+      "name": "Frangelico",
+      "qty": "1/3 part"
+    },
+    {
+      "name": "151 proof rum",
+      "qty": "1/2 shot Bacardi"
+    },
+    {
+      "name": "Wild Turkey",
+      "qty": "1/2 shot"
+    },
+    {
+      "name": "Gin",
+      "qty": "2 shots"
+    },
+    {
+      "name": "Grenadine",
+      "qty": "1/2 shot"
+    },
+    {
+      "name": "Heavy cream",
+      "qty": "1/2 shot"
+    },
+    {
+      "name": "Milk",
+      "qty": "1/2 shot"
+    },
+    {
+      "name": "Egg white",
+      "qty": "1/2 Fresh"
+    },
+    {
+      "name": "Dark rum",
+      "qty": "2 oz"
+    },
+    {
+      "name": "Lemon juice",
+      "qty": "1 oz"
+    },
+    {
+      "name": "Grenadine",
+      "qty": "1 tsp"
+    },
+    {
+      "name": "Kahlua",
+      "qty": "1/3 shot"
+    },
+    {
+      "name": "Sambuca",
+      "qty": "1/3 shot"
+    },
+    {
+      "name": "Grand Marnier",
+      "qty": "1/3 shot"
+    },
+    {
+      "name": "Absolut Vodka",
+      "qty": "1 oz"
+    },
+    {
+      "name": "Gin",
+      "qty": "1 oz"
+    },
+    {
+      "name": "Tonic water",
+      "qty": "4 oz"
+    }
+  ]
+}
