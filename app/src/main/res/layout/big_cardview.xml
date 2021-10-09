@@ -17,7 +17,7 @@
 
             <!-- Media -->
             <ImageView
-                android:id="@+id/image"
+                android:id="@+id/cocktail_photo"
                 android:layout_width="match_parent"
                 android:layout_height="194dp"
                 android:contentDescription="@string/drink_image"
@@ -32,7 +32,7 @@
 
                 <!-- Title, secondary and supporting text -->
                 <TextView
-                    android:id="@+id/title"
+                    android:id="@+id/cocktail_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?attr/textAppearanceHeadline6"
@@ -56,7 +56,7 @@
                     tools:itemCount="@sample/drinks.json/drinks/ingredients_count"/>
 
                 <TextView
-                    android:id="@+id/text"
+                    android:id="@+id/cocktail_recipe"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
