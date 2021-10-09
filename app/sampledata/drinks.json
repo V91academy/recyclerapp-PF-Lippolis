@@ -1,0 +1,54 @@
+{
+  "drinks": [
+    {
+      "name": "GG",
+      "ingredients_count": 3,
+      "recipe": "Pour the Galliano liqueur over ice. Fill the remainder of the glass with ginger ale and thats all there is to it. You now have a your very own GG."
+    },
+    {
+      "name": "A1",
+      "ingredients_count": 4,
+      "recipe": "Pour all ingredients into a cocktail shaker, mix and serve over ice into a chilled glass."
+    },
+    {
+      "name": "ABC",
+      "ingredients_count": 3,
+      "recipe": "Layered in a shot glass."
+    },
+    {
+      "name": "Kir",
+      "ingredients_count": 2,
+      "recipe": "Add the crème de cassis to the bottom of the glass, then top up with wine."
+    },
+    {
+      "name": "747",
+      "ingredients_count": 3,
+      "recipe": "pour kaluha, then Baileys, then Frangelico not chilled and not layered -- SERVE!!!"
+    },
+    {
+      "name": "252",
+      "ingredients_count": 2,
+      "recipe": "Add both ingredients to shot glass, shoot, and get drunk quick"
+    },
+    {
+      "name": "Ace",
+      "ingredients_count": 5,
+      "recipe": "Shake all the ingredients in a cocktail shaker and ice then strain in a cold glass."
+    },
+    {
+      "name": "Adam",
+      "ingredients_count": 3,
+      "recipe": "In a shaker half-filled with ice cubes, combine all of the ingredients. Shake well. Strain into a cocktail glass."
+    },
+    {
+      "name": "B-53",
+      "ingredients_count": 3,
+      "recipe": "Layer the Kahlua, Sambucca and Grand Marnier into a shot glas in that order. Better than B-52"
+    },
+    {
+      "name": "AT&T",
+      "ingredients_count": 3,
+      "recipe": "Pour Vodka and Gin over ice, add Tonic and Stir"
+    }
+  ]
+}
