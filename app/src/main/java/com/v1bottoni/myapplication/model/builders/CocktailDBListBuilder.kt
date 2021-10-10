@@ -1,15 +1,12 @@
 package com.v1bottoni.myapplication.model.builders
 
-import android.os.Build
 import android.os.Parcel
 import android.os.Parcelable
-import androidx.annotation.RequiresApi
-import com.v1bottoni.myapplication.CocktailListFragment
+import android.util.Log
 import com.v1bottoni.myapplication.model.Cocktail
 import com.v1bottoni.myapplication.model.Ingredient
 import org.json.JSONObject
 import java.lang.IllegalStateException
-import java.nio.file.Paths
 
 /**
  * Class responsible for creating a List<Cocktail> using data from the site www.thecocktaildb.com
@@ -59,12 +56,17 @@ class CocktailDBListBuilder(
             val ingredients = mutableListOf<Ingredient>()
             var j = 1
             var ingredientName: String? = null
-            ingredientName = cocktail.getString("strIngredient$j")
-            while(!ingredientName.isNullOrEmpty()) {
-                val ingredientQuantity = cocktail.getString("strMeasure$j") ?: ""
+            while(!cocktail.isNull("strIngredient$j")) {
+                ingredientName = cocktail.getString("strIngredient$j")
+                val ingredientQuantity =
+                    if(!cocktail.isNull("strMeasure$j")){
+                        cocktail.getString("strMeasure$j")
+                    } else {
+                        ""
+                    }
+
                 ingredients.add(Ingredient(ingredientName, ingredientQuantity))
                 j++
-                ingredientName = cocktail.getString("strIngredient$j")
             }
             val image = cocktail.getString("strDrinkThumb")
             cocktailsList.add(Cocktail(name, recipe, ingredients, image))
