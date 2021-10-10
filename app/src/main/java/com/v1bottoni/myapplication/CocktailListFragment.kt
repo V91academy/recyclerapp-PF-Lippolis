@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.v1bottoni.myapplication.adapters.CocktailAdapter
+import com.v1bottoni.myapplication.adapters.HeaderAdapter
 import com.v1bottoni.myapplication.databinding.FragmentCocktailListBinding
 import com.v1bottoni.myapplication.model.builders.CocktailListBuilder
 
@@ -36,7 +37,7 @@ class CocktailListFragment private constructor(): Fragment() {
         binding  = FragmentCocktailListBinding.inflate(inflater, container, false)
         //TODO(Put placeholder in case the list doesn't load)
         val drinkList = builder!!.build()
-        binding.cocktailsList.adapter = CocktailAdapter(drinkList)
+        binding.cocktailsList.adapter = HeaderAdapter("Here are your cocktails:", CocktailAdapter(drinkList))
         return binding.root
     }
 

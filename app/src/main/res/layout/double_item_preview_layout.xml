@@ -4,6 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <include layout="@layout/list_header"/>
     <include layout="@layout/big_cardview"/>
     <include layout="@layout/small_cardview"/>
 </LinearLayout>
