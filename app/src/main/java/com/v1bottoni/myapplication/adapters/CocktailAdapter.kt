@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
+import com.v1bottoni.myapplication.R
 import com.v1bottoni.myapplication.databinding.BigCardviewBinding
 import com.v1bottoni.myapplication.databinding.SmallCardviewBinding
 import com.v1bottoni.myapplication.model.Cocktail
@@ -81,7 +82,9 @@ class CocktailAdapter(val list: List<Cocktail>): RecyclerView.Adapter<CocktailAd
         circularProgressDrawable.start()
         Glide.with(holder.image.context)
             .load(cocktail.image)
-            .placeholder(circularProgressDrawable).into(holder.image)
+            .placeholder(circularProgressDrawable)
+            .error(R.drawable.drink_image_placeholder)
+            .into(holder.image)
     }
 
     override fun getItemCount(): Int {
