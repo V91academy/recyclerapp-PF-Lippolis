@@ -11,5 +11,5 @@
         android:layout_margin="16dp"
         android:textSize="30sp"
         android:textColor="?attr/colorOnPrimarySurface"
-        tools:text="Here are your cocktails:"/>
+        tools:text="Drinks"/>
 </FrameLayout>
