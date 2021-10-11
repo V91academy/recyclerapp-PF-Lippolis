@@ -84,6 +84,7 @@ class CocktailAdapter(val list: List<Cocktail>): RecyclerView.Adapter<CocktailAd
             .load(cocktail.image)
             .placeholder(circularProgressDrawable)
             .error(R.drawable.drink_image_placeholder)
+            .centerCrop()
             .into(holder.image)
     }
 
