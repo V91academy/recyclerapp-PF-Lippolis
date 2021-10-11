@@ -13,7 +13,7 @@ import com.v1bottoni.myapplication.databinding.BigCardviewBinding
 import com.v1bottoni.myapplication.databinding.SmallCardviewBinding
 import com.v1bottoni.myapplication.model.Cocktail
 
-class CocktailAdapter(val list: List<Cocktail>): RecyclerView.Adapter<CocktailAdapter.CocktailViewHolder>() {
+class CocktailAdapter(val list: List<Cocktail>, val onItemClick: ((String) -> Unit)): RecyclerView.Adapter<CocktailAdapter.CocktailViewHolder>() {
 
     abstract inner class CocktailViewHolder(view: View): RecyclerView.ViewHolder(view) {
         abstract val name: TextView
@@ -74,7 +74,12 @@ class CocktailAdapter(val list: List<Cocktail>): RecyclerView.Adapter<CocktailAd
         val cocktail = list[position]
         holder.name.text = cocktail.name
         holder.recipe.text = cocktail.recipe
-        holder.ingredients.adapter = IngredientAdapter(cocktail.ingredients)
+        holder.ingredients.adapter = IngredientAdapter(cocktail.ingredients) {
+            onItemClick.invoke(
+                cocktail.toString()
+            )
+        }
+        holder.itemView.bringToFront()
 
         val circularProgressDrawable = CircularProgressDrawable(holder.image.context)
         circularProgressDrawable.strokeWidth = 5f
@@ -86,6 +91,7 @@ class CocktailAdapter(val list: List<Cocktail>): RecyclerView.Adapter<CocktailAd
             .error(R.drawable.drink_image_placeholder)
             .centerCrop()
             .into(holder.image)
+
     }
 
     override fun getItemCount(): Int {

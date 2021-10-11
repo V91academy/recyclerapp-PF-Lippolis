@@ -1,14 +1,18 @@
 package com.v1bottoni.myapplication
 
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.v1bottoni.myapplication.adapters.CocktailAdapter
 import com.v1bottoni.myapplication.adapters.HeaderAdapter
 import com.v1bottoni.myapplication.databinding.FragmentCocktailListBinding
 import com.v1bottoni.myapplication.model.builders.CocktailListBuilder
+import java.io.IOException
 
 // the fragment initialization parameters
 private const val ARG_BUILDER = "builder"
@@ -37,7 +41,23 @@ class CocktailListFragment private constructor(): Fragment() {
         binding  = FragmentCocktailListBinding.inflate(inflater, container, false)
         //TODO(Put placeholder in case the list doesn't load)
         val drinkList = builder!!.build()
-        binding.cocktailsList.adapter = HeaderAdapter("Drinks", CocktailAdapter(drinkList))
+        val onItemClick: ((String) -> Unit) = {
+                cocktail: String ->
+            try{
+                Log.d("RecyclerView onClickListener", "activity: $activity")
+                Log.d("RecyclerView onClickListener", "filesDir = ${activity?.filesDir}")
+                activity?.openFileOutput(getString(R.string.cocktails_file), Context.MODE_PRIVATE).use {
+                    Log.d("RecyclerView onClickListener", "os: ${it.toString()}")
+                    it?.write(cocktail.toByteArray())
+                }
+                Toast.makeText(activity,"Cocktail saved",Toast.LENGTH_LONG).show()
+
+            } catch (e: IOException) {
+                Toast.makeText(activity, "Sorry, we couldn't save your cocktail", Toast.LENGTH_LONG).show()
+            }
+
+        }
+        binding.cocktailsList.adapter = HeaderAdapter("Drinks", CocktailAdapter(drinkList, onItemClick))
         return binding.root
     }
 

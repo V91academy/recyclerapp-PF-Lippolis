@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.v1bottoni.myapplication.R
 import com.v1bottoni.myapplication.model.Ingredient
 
-class IngredientAdapter(val list: List<Ingredient>):
+class IngredientAdapter(val list: List<Ingredient>, val function: () -> Unit):
     RecyclerView.Adapter<IngredientAdapter.IngredientViewHolder>() {
 
     inner class IngredientViewHolder(view: View): RecyclerView.ViewHolder(view) {
@@ -29,6 +29,9 @@ class IngredientAdapter(val list: List<Ingredient>):
         val ingredient = list[position]
         holder.name.text = ingredient.name
         holder.quantity.text = ingredient.quantity
+        holder.itemView.setOnClickListener{
+            function.invoke()
+        }
     }
 
     override fun getItemCount(): Int {
