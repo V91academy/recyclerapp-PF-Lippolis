@@ -37,7 +37,7 @@ class CocktailListFragment private constructor(): Fragment() {
         binding  = FragmentCocktailListBinding.inflate(inflater, container, false)
         //TODO(Put placeholder in case the list doesn't load)
         val drinkList = builder!!.build()
-        binding.cocktailsList.adapter = HeaderAdapter("Here are your cocktails:", CocktailAdapter(drinkList))
+        binding.cocktailsList.adapter = HeaderAdapter("Drinks", CocktailAdapter(drinkList))
         return binding.root
     }
 

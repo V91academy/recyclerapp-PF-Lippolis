@@ -11,6 +11,7 @@
         android:nestedScrollingEnabled="false"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="?attr/colorPrimarySurface"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/double_item_preview_layout"
         tools:showIn="@layout/activity_main"/>
