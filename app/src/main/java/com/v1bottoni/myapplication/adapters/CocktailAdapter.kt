@@ -79,6 +79,11 @@ class CocktailAdapter(val list: List<Cocktail>, val onItemClick: ((String) -> Un
                 cocktail.toString()
             )
         }
+        holder.itemView.setOnClickListener {
+            onItemClick.invoke(
+                cocktail.toString()
+            )
+        }
         holder.itemView.bringToFront()
 
         val circularProgressDrawable = CircularProgressDrawable(holder.image.context)
