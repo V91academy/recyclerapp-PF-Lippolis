@@ -22,7 +22,7 @@ private const val ARG_BUILDER = "builder"
  * Use the [CocktailListFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class CocktailListFragment private constructor(): Fragment() {
+class CocktailListFragment: Fragment() {
     private var builder: CocktailListBuilder? = null
     lateinit var binding: FragmentCocktailListBinding
 
